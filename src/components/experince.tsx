@@ -52,7 +52,7 @@ const Experience = () => {
 
       {/* Laptop Image */}
       <div className="hidden lg:block absolute bottom-[150px] right-[100px] z-0">
-        <Image src={laptop} alt="laptop" width={400} />
+        <Image src={laptop} alt="laptop" width={1000} />
       </div>
       <div className="block lg:hidden w-[80%] mx-auto mt-10 z-10">
         <Image src={laptop} alt="laptop mobile" />

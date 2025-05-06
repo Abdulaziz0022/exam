@@ -7,7 +7,6 @@ const Landing = () => {
     <div className="bg-[#0E041D] h-[705px] flex items-center justify-center px-4 py-12">
       <div className="w-[90%] flex flex-col lg:flex-row bg-[#1B0E2F] shadow-lg overflow-hidden rounded-2xl">
 
-        {/* Left Text Section (60%) */}
         <div className="w-full lg:w-[60%] p-8 lg:p-12 text-white">
           <h2 className="text-3xl lg:text-4xl font-bold mb-8">Landing sahifalar</h2>
 
@@ -43,7 +42,6 @@ const Landing = () => {
           </button>
         </div>
 
-        {/* Right Image Section (40%) */}
         <div className="w-full lg:w-[40%] h-[705px] relative">
           <Image
             src={landingImage}

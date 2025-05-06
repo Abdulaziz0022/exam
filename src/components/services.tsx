@@ -1,15 +1,6 @@
 'use client';
 
-import Image from 'next/image';
-import icon1 from '../assets/icon1.png';
-import icon2 from '../assets/icon2.png';
-import icon3 from '../assets/icon3.png';
-import icon4 from '../assets/icon4.png';
-import icon5 from '../assets/icon5.png';
-import icon6 from '../assets/icon6.png';
-import icon7 from '../assets/icon7.png';
-import icon8 from '../assets/icon8.png';
-import icon9 from '../assets/icon9.png';
+import { FileText, Briefcase, ShoppingCart, Users, FileSpreadsheet, CalendarCog, GraduationCap, Box, BarChart } from 'lucide-react'
 
 const Services = () => {
   return (
@@ -23,7 +14,7 @@ const Services = () => {
         <div className="pt-[70px] flex flex-wrap justify-center gap-10 pb-[100px]">
           {/* Landing Page */}
           <div className="w-[440px] h-[440px] border border-white rounded-lg bg-[#FFFFFF1A] hover:bg-[#FFFFFF33] transition-all duration-300">
-            <Image src={icon5} alt="Landing" className="px-[142px] pt-[55px]" />
+            <FileText size={100} className="mx-auto pt-[55px] text-white" />
             <p className="text-white font-[600] text-[30px] pt-[30px]">Landing sahifalar</p>
             <p className="text-white font-[400] text-[18px] px-[35px] pt-[15px]">
               Qisqa, tasirli va maqsadli sahifalar, mijozlarni alohida harakatga undash uchun moljallangan.
@@ -32,7 +23,7 @@ const Services = () => {
 
           {/* Corporate Website */}
           <div className="w-[440px] h-[440px] border border-white rounded-lg bg-[#FFFFFF1A] hover:bg-[#FFFFFF33] transition-all duration-300">
-            <Image src={icon2} alt="Corporate Website" className="px-[142px] pt-[55px]" />
+            <Briefcase size={100} className="mx-auto pt-[55px] text-white" />
             <p className="text-white font-[600] text-[30px] pt-[30px]">Korporativ veb-sayt</p>
             <p className="text-white font-[400] text-[18px] px-[35px] pt-[15px]">
               Kompaniyaning umumiy malumotini taqdim etish, xizmatlar yoki mahsulotlar haqida malumot berish.
@@ -41,7 +32,7 @@ const Services = () => {
 
           {/* E-commerce */}
           <div className="w-[440px] h-[440px] border border-white rounded-lg bg-[#FFFFFF1A] hover:bg-[#FFFFFF33] transition-all duration-300">
-            <Image src={icon3} alt="E-commerce" className="px-[142px] pt-[55px]" width={160} height={160} />
+            <ShoppingCart size={100} className="mx-auto pt-[55px] text-white" />
             <p className="text-white font-[600] text-[30px] pt-[30px]">Online do’kon</p>
             <p className="text-white font-[400] text-[18px] px-[35px] pt-[15px]">
               Mahsulotlar yoki xizmatlarni onlayn tarzda sotish. To‘lov tizimlari va mahsulotni boshqarish tizimi mavjud.
@@ -50,7 +41,7 @@ const Services = () => {
 
           {/* CRM System */}
           <div className="w-[440px] h-[440px] border border-white rounded-lg bg-[#FFFFFF1A] hover:bg-[#FFFFFF33] transition-all duration-300">
-            <Image src={icon7} alt="Mobile Apps" className="px-[142px] pt-[55px]" width={160} height={160} />
+            <Users size={100} className="mx-auto pt-[55px] text-white" />
             <p className="text-white font-[600] text-[30px] pt-[30px]">CRM tizimi</p>
             <p className="text-white font-[400] text-[18px] px-[35px] pt-[15px]">
               Mijozlar bilan ishlashni avtomatlashtirish va boshqarish. Katta kompaniyalar yoki mijozlar bilan faol ishlaydigan tashkilotlar.
@@ -59,7 +50,7 @@ const Services = () => {
 
           {/* Portfolio Websites */}
           <div className="w-[440px] h-[440px] border border-white rounded-lg bg-[#FFFFFF1A] hover:bg-[#FFFFFF33] transition-all duration-300">
-            <Image src={icon4} alt="CRM System" className="px-[142px] pt-[55px]" width={160} height={160} />
+            <FileSpreadsheet size={100} className="mx-auto pt-[55px] text-white" />
             <p className="text-white font-[600] text-[30px] pt-[30px]">Portfolio saytlari</p>
             <p className="text-white font-[400] text-[18px] px-[35px] pt-[15px]">
               Shaxsiy yoki kompaniya ishlarini ko‘rsatish. Freelancerlar yoki ijodkorlar uchun o‘z ishlarini targ‘ib qilishda.
@@ -68,7 +59,7 @@ const Services = () => {
 
           {/* Blog Pages */}
           <div className="w-[440px] h-[440px] border border-white rounded-lg bg-[#FFFFFF1A] hover:bg-[#FFFFFF33] transition-all duration-300">
-            <Image src={icon1} alt="SEO Optimization" className="px-[142px] pt-[55px]" width={160} height={160} />
+            <CalendarCog size={100} className="mx-auto pt-[55px] text-white" />
             <p className="text-white font-[600] text-[30px] pt-[30px]">Blog sahifalari</p>
             <p className="text-white font-[400] text-[18px] px-[35px] pt-[15px]">
               O‘z fikrlari, yangiliklari yoki malumotlarini o‘rtoqlashish. Malumot yetkazish, auditoriyani jalb qilish va reklama qilish uchun.
@@ -77,7 +68,7 @@ const Services = () => {
 
           {/* Education Platforms */}
           <div className="w-[440px] h-[440px] border border-white rounded-lg bg-[#FFFFFF1A] hover:bg-[#FFFFFF33] transition-all duration-300">
-            <Image src={icon6} alt="UI/UX Design" className="px-[142px] pt-[55px]" width={160} height={160} />
+            <GraduationCap size={100} className="mx-auto pt-[55px] text-white" />
             <p className="text-white font-[600] text-[30px] pt-[30px]">Ta’lim platformasi</p>
             <p className="text-white font-[400] text-[18px] px-[35px] pt-[15px]">
               Talim kurslari, videodarsliklar, yoki online testlar uchun. O‘quv muassasalari yoki onlayn dars beruvchi kompaniyalar uchun.
@@ -86,7 +77,7 @@ const Services = () => {
 
           {/* ERP Platform */}
           <div className="w-[440px] h-[440px] border border-white rounded-lg bg-[#FFFFFF1A] hover:bg-[#FFFFFF33] transition-all duration-300">
-            <Image src={icon8} alt="Custom Software" className="px-[142px] pt-[55px]" width={160} height={160} />
+            <Box size={100} className="mx-auto pt-[55px] text-white" />
             <p className="text-white font-[600] text-[30px] pt-[30px]">ERP platformasi</p>
             <p className="text-white font-[400] text-[18px] px-[35px] pt-[15px]">
               ERP platformasi korxona yoki tashkilotning barcha jarayonlarini birlashtiruvchi kompleks dasturiy taminotdir. U tashkilotning moliyaviy, ishlab chiqarish, logistika, kadrlar boshqaruvi.
@@ -95,7 +86,7 @@ const Services = () => {
 
           {/* Custom Project */}
           <div className="w-[440px] h-[440px] border border-white rounded-lg bg-[#5A00DB] transition-all duration-300">
-            <Image src={icon9} alt="Technical Support" className="px-[142px] pt-[55px]" width={160} height={160} />
+            <BarChart size={100} className="mx-auto pt-[55px] text-white" />
             <p className="text-white font-[600] text-[30px] pt-[30px]">Alohida loyihami ?</p>
             <p className="text-white font-[400] text-[18px] px-[35px] pt-[15px]">
               Biz yangi startap loyihalarni ham rivojlantirishda yordam beramiz. Agarda sizda yangi startap g’oya mavjud bo’lsa biz siz bilan uni rivojlantirish ustida ishlashga tayyormiz.

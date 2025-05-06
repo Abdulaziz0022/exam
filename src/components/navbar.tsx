@@ -1,9 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import { useState } from "react";
-import logo from "../assets/logo.png";
-import { HiMenu, HiX } from "react-icons/hi";
+import Image from "next/image"
+import Link from "next/link"
+import { useState } from "react"
+import { HiMenu, HiX } from "react-icons/hi"
+import logo from "../assets/logo.png"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,10 +13,25 @@ const Navbar = () => {
 
   const languages = ["UZ", "RU", "EN"];
 
-  const menuItems: Record<string, string[]> = {
-    UZ: ["Bosh sahifa", "Portfolio", "Xizmatlar", "Aloqa"],
-    RU: ["Главная", "Портфолио", "Услуги", "Контакты"],
-    EN: ["Home", "Portfolio", "Services", "Contact"],
+  const menuItems: Record<string, { label: string; href: string }[]> = {
+    UZ: [
+      { label: "Bosh sahifa", href: "/" },
+      { label: "Portfolio", href: "/portfolio" },
+      { label: "Xizmatlar", href: "/services" },
+      { label: "Aloqa", href: "/#footer" },
+    ],
+    RU: [
+      { label: "Главная", href: "/" },
+      { label: "Портфолио", href: "/portfolio" },
+      { label: "Услуги", href: "/services" },
+      { label: "Контакты", href: "/#footer" },
+    ],
+    EN: [
+      { label: "Home", href: "/" },
+      { label: "Portfolio", href: "/portfolio" },
+      { label: "Services", href: "/services" },
+      { label: "Contact", href: "/#footer"  },
+    ],
   };
 
   const buttonText: Record<string, string> = {
@@ -27,14 +43,16 @@ const Navbar = () => {
   return (
     <nav className="bg-[#0E041D] w-full fixed top-0 left-0 z-50 shadow-md">
       <div className="container mx-auto flex items-center justify-between py-4 px-6 lg:px-20">
-        <Image
-          src={logo}
-          alt="Logo"
-          width={180}
-          height={30}
-          className="brightness-200"
-          priority
-        />
+        <Link href="/">
+          <Image
+            src={logo}
+            alt="Logo"
+            width={180}
+            height={30}
+            className="brightness-200 cursor-pointer"
+            priority
+          />
+        </Link>
 
         <ul className="hidden lg:flex gap-x-8">
           {menuItems[selectedLanguage].map((item, index) => (
@@ -42,7 +60,7 @@ const Navbar = () => {
               key={index}
               className="text-white font-medium text-[16px] px-4 py-2 rounded-lg transition-all duration-300 cursor-pointer hover:bg-[#261D33]"
             >
-              {item}
+              <Link href={item.href}>{item.label}</Link>
             </li>
           ))}
         </ul>
@@ -114,7 +132,7 @@ const Navbar = () => {
               className="py-2 px-6 rounded-lg transition-all duration-300 cursor-pointer hover:bg-[#261D33]"
               onClick={() => setMenuOpen(false)}
             >
-              {item}
+              <Link href={item.href}>{item.label}</Link>
             </li>
           ))}
 
