@@ -46,7 +46,6 @@ const Navbar = () => {
         </ul>
 
         <div className="flex items-center gap-4">
-          {/* Language selector (desktop) */}
           <div className="relative hidden lg:block">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -87,7 +86,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <div
         className={`fixed top-0 left-0 w-[75%] sm:w-[60%] md:w-[50%] h-screen bg-[#0E041D] shadow-lg transition-transform duration-300 ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
@@ -115,7 +113,6 @@ const Navbar = () => {
             Loyiha bormi?
           </button>
 
-          {/* Language Selector (Mobile) */}
           <div className="mt-4">
             <span className="text-sm text-gray-400 mb-1 block text-center">Tilni tanlang:</span>
             <div className="flex justify-center gap-4">
