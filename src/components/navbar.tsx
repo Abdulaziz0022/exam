@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-[#0E041D] w-full fixed top-0 left-0 z-50 shadow-md">
-      <div className="w-[%] mx-auto flex items-center justify-between py-4 px-6 lg:px-20">
+      <div className="w-[87%] mx-auto flex items-center justify-between py-4 px-6 lg:px-20">
         <Link href="/">
           <Image
             src={logo}
