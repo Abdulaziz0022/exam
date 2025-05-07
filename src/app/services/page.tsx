@@ -1,8 +1,12 @@
 import React from 'react'
-
+import Mijoz2 from '@/components/mijoz2'
+import Landing from '@/components/landing'
 const page = () => {
 	return (
-		<div>page</div>
+		<div>
+			<Mijoz2/>
+			<Landing/>
+		</div>
 	)
 }
 

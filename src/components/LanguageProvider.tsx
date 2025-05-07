@@ -1,19 +1,16 @@
 "use client";
 
-import Footer from "@/components/footer"
-import Navbar from "@/components/navbar"
-import { useState } from "react"
+import Footer from "@/components/footer";
+import Navbar from './Navbar'
 
 export default function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [selectedLanguage] = useState<"UZ" | "RU" | "EN">("EN");
-
   return (
     <>
       <Navbar />
       {children}
-      <div id='footer'>
-			<Footer selectedLanguage={selectedLanguage} />
-			</div>
+      <div id="footer">
+        <Footer />
+      </div>
     </>
   );
 }

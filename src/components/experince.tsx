@@ -16,13 +16,11 @@ const Experience = () => {
   ];
 
   return (
-    <div className="relative bg-[#0E041D] w-full min-h-[850px] overflow-hidden">
-      {/* Background Blur Circles */}
+    <div className="relative bg-[#0E041D] w-full min-h-[850px] overflow-hidden pt-[100px]">
       <div className="absolute w-72 h-72 rounded-full bg-purple-700 blur-3xl opacity-40 top-1/4 left-[60%] -translate-x-1/2 z-0" />
       <div className="absolute w-48 h-40 rounded-full bg-purple-700 blur-3xl opacity-60 top-2/3 left-[42%] z-0" />
 
       <div className="container mx-auto w-[80%] flex flex-col relative z-10">
-        {/* Headline Section */}
         <div className="pt-[130px]">
           <p className="text-white text-[48px] font-bold">Yuqori sifatdagi</p>
           <p className="text-white text-[48px] font-light">aniqlikka asoslanib</p>
@@ -33,7 +31,6 @@ const Experience = () => {
           </button>
         </div>
 
-        {/* Stats Section */}
         <div className="mt-[100px] mb-[30px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {experienceData.map((item, index) => (
             <div
@@ -50,7 +47,6 @@ const Experience = () => {
         </div>
       </div>
 
-      {/* Laptop Image */}
       <div className="hidden lg:block absolute bottom-[150px] right-[100px] z-0">
         <Image src={laptop} alt="laptop" width={1000} />
       </div>
@@ -58,7 +54,6 @@ const Experience = () => {
         <Image src={laptop} alt="laptop mobile" />
       </div>
 
-      {/* About Section */}
       <div className="w-full h-[150px] bg-[#5A00DB] px-[40px] py-[30px] flex flex-col justify-center">
         <h1 className="font-bold text-[48px] text-white">Biz haqimizda</h1>
         <p className="font-normal text-[18px] text-white">Qisqacha ma’lumot</p>

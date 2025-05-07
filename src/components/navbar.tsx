@@ -1,44 +1,24 @@
 "use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { useState } from "react"
-import { HiMenu, HiX } from "react-icons/hi"
-import logo from "../assets/logo.png"
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { HiMenu, HiX } from "react-icons/hi";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("UZ");
+  const [selectedLanguage, setSelectedLanguage] = useState<"UZ" | "RU" | "EN">("UZ");
+  const [isOpen, setIsOpen] = useState(false);
 
-  const languages = ["UZ", "RU", "EN"];
+  const languages: ("UZ" | "EN")[] = ["UZ","EN"];
 
-  const menuItems: Record<string, { label: string; href: string }[]> = {
-    UZ: [
-      { label: "Bosh sahifa", href: "/" },
-      { label: "Portfolio", href: "/portfolio" },
-      { label: "Xizmatlar", href: "/services" },
-      { label: "Aloqa", href: "/#footer" },
-    ],
-    RU: [
-      { label: "Главная", href: "/" },
-      { label: "Портфолио", href: "/portfolio" },
-      { label: "Услуги", href: "/services" },
-      { label: "Контакты", href: "/#footer" },
-    ],
-    EN: [
-      { label: "Home", href: "/" },
-      { label: "Portfolio", href: "/portfolio" },
-      { label: "Services", href: "/services" },
-      { label: "Contact", href: "/#footer"  },
-    ],
-  };
-
-  const buttonText: Record<string, string> = {
-    UZ: "Loyiha bormi?",
-    RU: "Есть проект?",
-    EN: "Have a project?",
-  };
+  const menuItems = [
+    { label: "Bosh sahifa", href: "/" },
+    { label: "Portfolio", href: "/portfolio" },
+    { label: "Xizmatlar", href: "/services" },
+    { label: "Aloqa", href: "/#footer" },
+  ];
 
   return (
     <nav className="bg-[#0E041D] w-full fixed top-0 left-0 z-50 shadow-md">
@@ -55,10 +35,10 @@ const Navbar = () => {
         </Link>
 
         <ul className="hidden lg:flex gap-x-8">
-          {menuItems[selectedLanguage].map((item, index) => (
+          {menuItems.map((item, index) => (
             <li
               key={index}
-              className="text-white font-medium text-[16px] px-4 py-2 rounded-lg transition-all duration-300 cursor-pointer hover:bg-[#261D33]"
+              className="text-white font-medium text-[16px] px-4 py-2 rounded-lg transition-all cursor-pointer hover:bg-[#261D33] border border-[#0E041D] hover:border-white"
             >
               <Link href={item.href}>{item.label}</Link>
             </li>
@@ -66,19 +46,16 @@ const Navbar = () => {
         </ul>
 
         <div className="flex items-center gap-4">
-          <div className="relative">
+          {/* Language selector (desktop) */}
+          <div className="relative hidden lg:block">
             <button
-              onClick={() => {
-                setIsOpen(!isOpen);
-                setMenuOpen(false);
-              }}
-              className="text-white px-6 py-2 rounded-lg hover:border-white hover:bg-[#261D33] transition-all duration-300"
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-white px-4 py-2 rounded-lg  hover:bg-[#261D33] transition border border-[#0E041D] hover:border-white"
             >
               {selectedLanguage}
             </button>
-
             {isOpen && (
-              <ul className="absolute left-0 mt-2 w-full bg-[#1E1529] text-white rounded-lg shadow-lg border z-10">
+              <ul className="absolute mt-2 bg-[#0E041D] hover:bg-[#261D33] text-white rounded-lg shadow-lg hover:border hover:border-white z-10">
                 {languages
                   .filter((lang) => lang !== selectedLanguage)
                   .map((lang) => (
@@ -88,7 +65,7 @@ const Navbar = () => {
                         setSelectedLanguage(lang);
                         setIsOpen(false);
                       }}
-                      className="px-6 py-2 cursor-pointer hover:bg-[#2B1E40] transition-all"
+                      className="px-4 py-2 cursor-pointer  transition-all"
                     >
                       {lang}
                     </li>
@@ -97,22 +74,20 @@ const Navbar = () => {
             )}
           </div>
 
-          <button className="hidden lg:block text-white bg-[#5A00DB] px-5 py-2 font-semibold rounded-lg hover:bg-white hover:text-[#5A00DB] transition-all duration-300">
-            {buttonText[selectedLanguage]}
+          <button className="hidden lg:block text-white bg-[#261D33] px-5 py-2 font-semibold rounded-lg  transition-all duration-300 border-white border">
+            Loyiha bormi?
           </button>
 
           <button
             className="lg:hidden text-white text-3xl"
-            onClick={() => {
-              setMenuOpen(!menuOpen);
-              setIsOpen(false);
-            }}
+            onClick={() => setMenuOpen(!menuOpen)}
           >
             {menuOpen ? <HiX /> : <HiMenu />}
           </button>
         </div>
       </div>
 
+      {/* Mobile Menu */}
       <div
         className={`fixed top-0 left-0 w-[75%] sm:w-[60%] md:w-[50%] h-screen bg-[#0E041D] shadow-lg transition-transform duration-300 ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
@@ -126,19 +101,39 @@ const Navbar = () => {
         </button>
 
         <ul className="flex flex-col items-center justify-center h-full gap-6 text-white text-lg">
-          {menuItems[selectedLanguage].map((item, index) => (
+          {menuItems.map((item, index) => (
             <li
               key={index}
-              className="py-2 px-6 rounded-lg transition-all duration-300 cursor-pointer hover:bg-[#261D33]"
+              className="py-2 px-6 rounded-lg transition-all duration-300 cursor-pointer hover:bg-[#261D33] border border-[#0E041D] hover:border-white"
               onClick={() => setMenuOpen(false)}
             >
               <Link href={item.href}>{item.label}</Link>
             </li>
           ))}
 
-          <button className="text-white bg-[#5A00DB] border-white px-6 py-3 font-semibold rounded-lg hover:bg-white hover:text-[#5A00DB] transition-all duration-300">
-            {buttonText[selectedLanguage]}
+          <button className="text-white bg-[#261D33] border-white px-6 py-3 font-semibold rounded-lg transition-all duration-300 border border-white">
+            Loyiha bormi?
           </button>
+
+          {/* Language Selector (Mobile) */}
+          <div className="mt-4">
+            <span className="text-sm text-gray-400 mb-1 block text-center">Tilni tanlang:</span>
+            <div className="flex justify-center gap-4">
+              {languages.map((lang) => (
+                <button
+                  key={lang}
+                  onClick={() => setSelectedLanguage(lang)}
+                  className={`px-4 py-1 rounded-md border ${
+                    selectedLanguage === lang
+                      ? "hover:bg-[#261D33] transition border border-[#0E041D] hover:border-white"
+                      : "hover:bg-[#261D33] transition border border-[#0E041D] hover:border-white"
+                  }`}
+                >
+                  {lang}
+                </button>
+              ))}
+            </div>
+          </div>
         </ul>
       </div>
 

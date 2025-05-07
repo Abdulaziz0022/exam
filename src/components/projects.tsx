@@ -8,7 +8,6 @@ import project3 from '../assets/project3.png';
 const Projects = () => {
   return (
     <div className="bg-[#0E041D] w-full min-h-[850px] relative py-20 overflow-hidden">
-      {/* Background blur circles */}
       <div className="w-72 h-72 rounded-full bg-purple-600 blur-3xl opacity-30 absolute z-0 top-[40%] left-[14%]" />
       <div className="w-72 h-72 rounded-full bg-purple-600 blur-3xl opacity-20 absolute z-0 top-[7%] left-[70%]" />
       <div className="w-72 h-72 rounded-full bg-purple-600 blur-3xl opacity-20 absolute z-0 top-[80%] left-[75%]" />
@@ -17,7 +16,6 @@ const Projects = () => {
         <h1 className="text-white text-center font-bold text-[48px]">Loyihalarimiz</h1>
         <p className="text-white text-center font-normal text-[18px]">Biz haqimizda gapirsin!</p>
 
-        {/* Project 1 */}
         <div className="flex flex-col lg:flex-row gap-10 mt-16">
           <div className="w-full lg:w-1/2">
             <Image src={project2} alt="Project 2" className="rounded-3xl w-full" />
@@ -33,7 +31,6 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* Project 2 */}
         <div className="flex flex-col lg:flex-row-reverse gap-10 mt-16">
           <div className="w-full lg:w-1/2">
             <Image src={project1} alt="Project 1" className="rounded-3xl w-full" />
@@ -49,7 +46,6 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* Project 3 */}
         <div className="flex flex-col lg:flex-row gap-10 mt-16">
           <div className="w-full lg:w-1/2">
             <Image src={project3} alt="Project 3" className="rounded-3xl w-full" />

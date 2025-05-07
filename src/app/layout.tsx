@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import LanguageProvider from "@/components/LanguageProvider";
 
 export const metadata: Metadata = {
-  title: "My App",
+  title: "Noventer",
   description: "App description here",
 };
 

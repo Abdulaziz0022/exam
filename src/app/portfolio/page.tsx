@@ -1,13 +1,12 @@
+import Mijoz3 from '@/components/mijoz3'
+import Projects from '@/components/projects'
 import React from 'react'
-import Mijoz2 from '@/components/mijoz2'
-import Landing from '@/components/landing'
-import Services from '@/components/services'
+
 const Portfoliopage = () => {
 	return (
 		<div>
-			<Mijoz2/>
-			<Landing/>
-			<Services/>
+		  <Mijoz3/>
+			<Projects/>
 		</div>
 	)
 }

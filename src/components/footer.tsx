@@ -1,69 +1,22 @@
 "use client";
 
-const Footer = ({ selectedLanguage = "UZ" }: { selectedLanguage: "UZ" | "RU" | "EN" }) => {
+const Footer = () => {
   const team = Array(9).fill({
     name: "Xusanov Alibek",
-    role: {
-      UZ: "Dasturchi",
-      RU: "Разработчик",
-      EN: "Developer",
-    },
+    role: "Dasturchi",
   });
-
-  const translations = {
-    title: {
-      UZ: "Biz bilan aloqa",
-      RU: "Свяжитесь с нами",
-      EN: "Contact Us",
-    },
-    subtitle: {
-      UZ: "Loyihangizni qanday realizatsiya qilish haqida batafsil suhbatlashamiz",
-      RU: "Давайте обсудим, как реализовать ваш проект",
-      EN: "Let's discuss how to realize your project",
-    },
-    teamTitle: {
-      UZ: "Bizning jamoa haqida",
-      RU: "О нашей команде",
-      EN: "About our team",
-    },
-    consultTitle: {
-      UZ: "Bepul konsultatsiya",
-      RU: "Бесплатная консультация",
-      EN: "Free Consultation",
-    },
-    consultText: {
-      UZ: "Loyihangiz bo’yicha boshlang’ich bepul konsultatsiya uchun ma’lumotingizni qoldiring.",
-      RU: "Оставьте свои данные для начальной бесплатной консультации по вашему проекту.",
-      EN: "Leave your details for a free initial consultation about your project.",
-    },
-    namePlaceholder: {
-      UZ: "Ismingiz",
-      RU: "Ваше имя",
-      EN: "Your Name",
-    },
-    phonePlaceholder: {
-      UZ: "Telefon raqamingiz",
-      RU: "Ваш номер телефона",
-      EN: "Your Phone Number",
-    },
-    submitButton: {
-      UZ: "Jo‘natish",
-      RU: "Отправить",
-      EN: "Submit",
-    },
-  };
 
   return (
     <footer className="bg-[#0E041D] w-full py-20 relative text-white text-center">
       <div className="w-[90%] mx-auto">
-        <h1 className="font-bold text-4xl">{translations.title[selectedLanguage]}</h1>
-        <p className="font-normal text-lg mt-4">{translations.subtitle[selectedLanguage]}</p>
+        <h1 className="font-bold text-4xl">Biz haqimizda</h1>
+        <p className="font-normal text-lg mt-4">
+          Eng yaxshi jamoamiz bilan sizning loyihalaringizni amalga oshiramiz
+        </p>
 
         <div className="flex flex-col lg:flex-row justify-center items-center gap-8 mt-10">
           <div className="w-full lg:w-2/3 bg-[#1A1129] border border-white rounded-lg p-5">
-            <p className="text-[30px] font-semibold text-left">
-              {translations.teamTitle[selectedLanguage]}
-            </p>
+            <p className="text-[30px] font-semibold text-left">Jamoamiz azolari</p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-5">
               {team.map((member, index) => (
@@ -74,9 +27,7 @@ const Footer = ({ selectedLanguage = "UZ" }: { selectedLanguage: "UZ" | "RU" | "
                   <div className="w-[84px] h-[84px] rounded-[8px] bg-white flex-shrink-0"></div>
                   <div className="text-left mt-[4px]">
                     <p className="font-medium text-[18px]">{member.name}</p>
-                    <p className="font-normal text-[14px]">
-                      {member.role[selectedLanguage]}
-                    </p>
+                    <p className="font-normal text-[14px]">{member.role}</p>
                   </div>
                 </div>
               ))}
@@ -85,28 +36,28 @@ const Footer = ({ selectedLanguage = "UZ" }: { selectedLanguage: "UZ" | "RU" | "
 
           <div className="w-full lg:w-1/3 bg-[#1A1129] border border-white rounded-lg p-6">
             <h2 className="text-[30px] font-semibold mb-5 mt-[20px]">
-              {translations.consultTitle[selectedLanguage]}
+              Konsultatsiya olish
             </h2>
             <p className="text-[16px] font-normal mb-4 px-6">
-              {translations.consultText[selectedLanguage]}
+              Iltimos, ismingiz va raqamingizni yozing, biz siz bilan tez orada boglanamiz
             </p>
 
             <form className="flex flex-col gap-4 items-center">
               <input
                 type="text"
-                placeholder={translations.namePlaceholder[selectedLanguage]}
+                placeholder="Ismingiz"
                 className="w-full max-w-[300px] text-[15px] px-4 py-3 rounded-lg bg-[#31283E] border border-gray-400 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-600 text-center mt-[20px]"
               />
               <input
                 type="text"
-                placeholder={translations.phonePlaceholder[selectedLanguage]}
+                placeholder="Telefon raqamingiz"
                 className="w-full max-w-[300px] text-[15px] px-4 py-3 rounded-lg bg-[#31283E] border border-gray-400 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-600 text-center mt-[10px]"
               />
               <button
                 type="submit"
                 className="w-full max-w-[300px] py-3 bg-[#5A00DB] hover:bg-white hover:text-[#5A00DB] text-white font-semibold rounded-lg transition-all duration-300 mt-[40px]"
               >
-                {translations.submitButton[selectedLanguage]}
+                Yuborish
               </button>
             </form>
           </div>
@@ -120,4 +71,3 @@ const Footer = ({ selectedLanguage = "UZ" }: { selectedLanguage: "UZ" | "RU" | "
 };
 
 export default Footer;
-

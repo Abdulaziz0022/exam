@@ -12,7 +12,6 @@ const Services = () => {
         </p>
 
         <div className="pt-[70px] flex flex-wrap justify-center gap-10 pb-[100px]">
-          {/* Landing Page */}
           <div className="w-[440px] h-[440px] border border-white rounded-lg bg-[#FFFFFF1A] hover:bg-[#FFFFFF33] transition-all duration-300">
             <FileText size={100} className="mx-auto pt-[55px] text-white" />
             <p className="text-white font-[600] text-[30px] pt-[30px]">Landing sahifalar</p>
@@ -21,7 +20,6 @@ const Services = () => {
             </p>
           </div>
 
-          {/* Corporate Website */}
           <div className="w-[440px] h-[440px] border border-white rounded-lg bg-[#FFFFFF1A] hover:bg-[#FFFFFF33] transition-all duration-300">
             <Briefcase size={100} className="mx-auto pt-[55px] text-white" />
             <p className="text-white font-[600] text-[30px] pt-[30px]">Korporativ veb-sayt</p>
@@ -30,7 +28,6 @@ const Services = () => {
             </p>
           </div>
 
-          {/* E-commerce */}
           <div className="w-[440px] h-[440px] border border-white rounded-lg bg-[#FFFFFF1A] hover:bg-[#FFFFFF33] transition-all duration-300">
             <ShoppingCart size={100} className="mx-auto pt-[55px] text-white" />
             <p className="text-white font-[600] text-[30px] pt-[30px]">Online do’kon</p>
@@ -39,7 +36,6 @@ const Services = () => {
             </p>
           </div>
 
-          {/* CRM System */}
           <div className="w-[440px] h-[440px] border border-white rounded-lg bg-[#FFFFFF1A] hover:bg-[#FFFFFF33] transition-all duration-300">
             <Users size={100} className="mx-auto pt-[55px] text-white" />
             <p className="text-white font-[600] text-[30px] pt-[30px]">CRM tizimi</p>
@@ -48,7 +44,6 @@ const Services = () => {
             </p>
           </div>
 
-          {/* Portfolio Websites */}
           <div className="w-[440px] h-[440px] border border-white rounded-lg bg-[#FFFFFF1A] hover:bg-[#FFFFFF33] transition-all duration-300">
             <FileSpreadsheet size={100} className="mx-auto pt-[55px] text-white" />
             <p className="text-white font-[600] text-[30px] pt-[30px]">Portfolio saytlari</p>
@@ -57,7 +52,6 @@ const Services = () => {
             </p>
           </div>
 
-          {/* Blog Pages */}
           <div className="w-[440px] h-[440px] border border-white rounded-lg bg-[#FFFFFF1A] hover:bg-[#FFFFFF33] transition-all duration-300">
             <CalendarCog size={100} className="mx-auto pt-[55px] text-white" />
             <p className="text-white font-[600] text-[30px] pt-[30px]">Blog sahifalari</p>
@@ -66,7 +60,6 @@ const Services = () => {
             </p>
           </div>
 
-          {/* Education Platforms */}
           <div className="w-[440px] h-[440px] border border-white rounded-lg bg-[#FFFFFF1A] hover:bg-[#FFFFFF33] transition-all duration-300">
             <GraduationCap size={100} className="mx-auto pt-[55px] text-white" />
             <p className="text-white font-[600] text-[30px] pt-[30px]">Ta’lim platformasi</p>
@@ -75,7 +68,6 @@ const Services = () => {
             </p>
           </div>
 
-          {/* ERP Platform */}
           <div className="w-[440px] h-[440px] border border-white rounded-lg bg-[#FFFFFF1A] hover:bg-[#FFFFFF33] transition-all duration-300">
             <Box size={100} className="mx-auto pt-[55px] text-white" />
             <p className="text-white font-[600] text-[30px] pt-[30px]">ERP platformasi</p>
@@ -84,7 +76,6 @@ const Services = () => {
             </p>
           </div>
 
-          {/* Custom Project */}
           <div className="w-[440px] h-[440px] border border-white rounded-lg bg-[#5A00DB] transition-all duration-300">
             <BarChart size={100} className="mx-auto pt-[55px] text-white" />
             <p className="text-white font-[600] text-[30px] pt-[30px]">Alohida loyihami ?</p>
@@ -95,7 +86,6 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Background Decorations */}
       <div className="w-48 h-40 rounded-full bg-purple-700 blur-3xl opacity-60 absolute top-1/100 left-1/7"></div>
       <div className="w-48 h-40 rounded-full bg-purple-700 blur-3xl opacity-60 absolute top-3/10 left-1"></div>
       <div className="w-48 h-40 rounded-full bg-purple-700 blur-3xl opacity-60 absolute top-4/10 left-3/10"></div>

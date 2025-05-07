@@ -27,11 +27,9 @@ const cardData = [
 const Cards = () => {
   return (
     <div className="relative bg-[#0E041D] w-full py-20 flex flex-col items-center overflow-hidden">
-      {/* Blurred Background Circles */}
       <div className="absolute w-72 h-72 rounded-full bg-purple-600 blur-3xl opacity-30 top-1/2 right-2 z-0"></div>
       <div className="absolute w-72 h-72 rounded-full bg-purple-700 blur-3xl opacity-40 top-1/2 left-1/4 z-0"></div>
 
-      {/* Cards Section */}
       <div className="w-[85%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 z-10">
         {cardData.map((card, index) => (
           <div
@@ -54,7 +52,6 @@ const Cards = () => {
         ))}
       </div>
 
-      {/* Extra Text */}
       <div className="w-[85%] text-white text-lg mt-10 z-10">
         <p>
           Bu yerda esa yana ko’proq ma’lumotlar berilishi kerak. <br />
