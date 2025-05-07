@@ -111,7 +111,7 @@ const Navbar = () => {
             </li>
           ))}
 
-          <button className="text-white bg-[#261D33] border-white px-6 py-3 font-semibold rounded-lg transition-all duration-300 border border-white">
+          <button className="text-white bg-[#261D33] px-6 py-3 font-semibold rounded-lg transition-all duration-300 border border-white">
             Loyiha bormi?
           </button>
 
