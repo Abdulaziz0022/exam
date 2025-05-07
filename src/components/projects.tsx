@@ -23,7 +23,7 @@ const Projects = () => {
           <div className="text-white w-full lg:w-1/2">
             <h2 className="font-semibold text-[24px] mt-8">Tourmad loyihasi</h2>
             <p className="font-normal text-[18px] mt-5">
-              Tourmad – O‘zbekistonning ichki turizmini rivojlantirish maqsadida ishlab chiqilgan bu web sayt o‘zida bir necha servicelarni jamlagan: Mehmonxona xizmati, Restoran xizmati, Gidlik xizmati, Mashinada sayohat qilish, haydovchilar xizmati va boshqa ko‘plab xizmatlar. Shuningdek, foydalanuvchilar xizmat narxlari va joylashuvini ko‘rib, oldindan buyurtma bera olishadi.
+            Tourmad – O‘zbekistonning ichki turizimini rivojlantirish maqsadida ishlab chiqilgan bu web sayt o‘zida bir necha service larni o‘z ichiga jamlagan bo‘lib ulardan: Mehmonxona xizmari, Restoran xizmati, Gitlik xizmati, Mashinada sayohat qilish uchun haydovchilar xizmari va boshqa ko‘plab xizmarlarni o‘z ichiga oladi. Bundan tashqari saytdan o‘zingiz uchun qayerlarga boorish kerakligini va qayerlarda xizmat ko‘satish qancha ekanligini ko‘rishingiz va o‘zingiz uchun oldindan buyurtma qilishingiz mumkin.
             </p>
             <button className="text-white font-semibold text-[16px] mt-5 px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-[#5A00DB] transition duration-300 bg-[#261D33]">
               Loyihani ko’rish
@@ -38,7 +38,9 @@ const Projects = () => {
           <div className="text-white w-full lg:w-1/2 text-right">
             <h2 className="font-semibold text-[24px] mt-12">ProRun loyihasi</h2>
             <p className="font-normal text-[18px] mt-5">
-              Prorun.uz – yugurish musobaqalari uchun maxsus yaratilgan platforma. Ishtirokchilar, shu jumladan chet elliklar ham, saytdan ro‘yxatdan o‘tib, istalgan musobaqada qatnashishlari mumkin. Sayt – ro‘yxatdan o‘tish jarayonini soddalashtirish maqsadida ishlab chiqilgan.
+            Prorun.uz – bu saytda tez-tez bo‘lib o‘tadigan yugurish bo‘yicha musobaqalar bo‘lib o‘tadi va siz saytdan ro‘ yxatdan o‘tgan holda istalgan yoki har bir musobaqada qatnashishingiz mumkin. 
+Nima uchun sayt qurilgan? Musobaqalarda chet ellik ishtirokchilar bo‘lgani bois ularga va boshqa qatnashchilarga ro‘yxatdan o‘tishni oson qilish uchun yangi web ilova ishlab chiqildi.
+
             </p>
             <button className="text-white font-semibold text-[16px] mt-8 px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-[#5A00DB] transition duration-300 bg-[#261D33]">
               Loyihani ko’rish
@@ -53,7 +55,8 @@ const Projects = () => {
           <div className="text-white w-full lg:w-1/2">
             <h2 className="font-semibold text-[24px] mt-10">Xalq trans loyihasi</h2>
             <p className="font-normal text-[18px] mt-5">
-              Bu yerda esa yana ko’proq ma’lumotlar berilishi kerak. Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived five centuries, and remains unchanged in electronic typesetting.
+            Bu yerda esa yana ko’proq ma’lumotlar berilishi kerak.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
             </p>
             <button className="text-white font-semibold text-[16px] mt-8 px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-[#5A00DB] transition duration-300 bg-[#261D33]">
               Loyihani ko’rish

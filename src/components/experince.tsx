@@ -17,8 +17,8 @@ const Experience = () => {
 
   return (
     <div className="relative bg-[#0E041D] w-full min-h-[850px] overflow-hidden pt-[100px]">
-      <div className="absolute w-72 h-72 rounded-full bg-purple-700 blur-3xl opacity-40 top-1/4 left-[60%] -translate-x-1/2 z-0" />
-      <div className="absolute w-48 h-40 rounded-full bg-purple-700 blur-3xl opacity-60 top-2/3 left-[42%] z-0" />
+      <div className="absolute w-72 h-72 rounded-full bg-purple-700 blur-3xl opacity-40 top-1/4 left-[65%] -translate-x-1/2 z-0" />
+      <div className="absolute w-48 h-40 rounded-full bg-purple-700 blur-3xl opacity-60 top-2/3 left-[40%] z-0" />
 
       <div className="container mx-auto w-[80%] flex flex-col relative z-10">
         <div className="pt-[130px]">

@@ -20,7 +20,10 @@ const cardData = [
   {
     img: img3,
     title: 'Jamoamiz kengaymoqda',
-    description: `Jamoamiz safi esa tobora kengaymoqda. Boshida - kishidan boshlangan faoliyatimiz hozirda`,
+    description: `Jamoamiz safi esa tobora
+kengaymoqda. Boshida - kishidan
+boshlangan faoliyatimiz hozirda
+-- kishi bilan davom etmoqda`,
   },
 ];
 
@@ -36,7 +39,7 @@ const Cards = () => {
             key={index}
             className="border border-white w-full h-[500px] md:h-[550px] bg-[#261D33] hover:bg-[#FFFFFF33] rounded-lg shadow-lg flex flex-col items-center transition duration-300"
           >
-            <div className="w-full h-[250px] md:h-[300px] flex justify-center items-center overflow-hidden rounded-t-lg">
+            <div className="w-full h-[250px] md:h-[350px] flex justify-center items-center overflow-hidden rounded-t-lg">
               <Image
                 src={card.img}
                 alt={`Card ${index + 1}`}
@@ -44,7 +47,7 @@ const Cards = () => {
                 placeholder="blur"
               />
             </div>
-            <div className="p-6 text-white text-center">
+            <div className="p-6 text-white text-left">
               <p className="font-semibold text-2xl">{card.title}</p>
               <p className="font-normal text-lg mt-2">{card.description}</p>
             </div>
