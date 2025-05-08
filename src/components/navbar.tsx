@@ -1,19 +1,26 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import { HiMenu, HiX } from "react-icons/hi";
-import logo from "../assets/logo.png";
+import Image from "next/image"
+import Link from "next/link"
+import { useState } from "react"
+import { HiMenu, HiX } from "react-icons/hi"
+import logo from "../assets/logo.png"
 
-const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState<"UZ" | "RU" | "EN">("UZ");
-  const [isOpen, setIsOpen] = useState(false);
+type Language = "UZ" | "EN";
 
-  const languages: ("UZ" | "EN")[] = ["UZ","EN"];
+interface MenuItem {
+  label: string;
+  href: string;
+}
 
-  const menuItems = [
+const Navbar: React.FC = () => {
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const [selectedLanguage, setSelectedLanguage] = useState<Language>("UZ");
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const languages: Language[] = ["UZ", "EN"];
+
+  const menuItems: MenuItem[] = [
     { label: "Bosh sahifa", href: "/" },
     { label: "Portfolio", href: "/portfolio" },
     { label: "Xizmatlar", href: "/services" },
@@ -49,7 +56,7 @@ const Navbar = () => {
           <div className="relative hidden lg:block">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white px-4 py-2 rounded-lg  hover:bg-[#261D33] transition border border-[#0E041D] hover:border-white"
+              className="text-white px-4 py-2 rounded-lg hover:bg-[#261D33] transition border border-[#0E041D] hover:border-white"
             >
               {selectedLanguage}
             </button>
@@ -64,7 +71,7 @@ const Navbar = () => {
                         setSelectedLanguage(lang);
                         setIsOpen(false);
                       }}
-                      className="px-4 py-2 cursor-pointer  transition-all"
+                      className="px-4 py-2 cursor-pointer transition-all"
                     >
                       {lang}
                     </li>
@@ -73,10 +80,12 @@ const Navbar = () => {
             )}
           </div>
 
-          <button className="hidden lg:block text-white bg-[#261D33] px-5 py-2 font-semibold rounded-lg  transition-all duration-300 border-white border">
+          {/* CTA Button */}
+          <button className="hidden lg:block text-white bg-[#261D33] px-5 py-2 font-semibold rounded-lg transition-all duration-300 border-white border">
             Loyiha bormi?
           </button>
 
+          {/* Mobile Menu Toggle */}
           <button
             className="lg:hidden text-white text-3xl"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -120,11 +129,7 @@ const Navbar = () => {
                 <button
                   key={lang}
                   onClick={() => setSelectedLanguage(lang)}
-                  className={`px-4 py-1 rounded-md border ${
-                    selectedLanguage === lang
-                      ? "hover:bg-[#261D33] transition border border-[#0E041D] hover:border-white"
-                      : "hover:bg-[#261D33] transition border border-[#0E041D] hover:border-white"
-                  }`}
+                  className={`px-4 py-1 rounded-md hover:bg-[#261D33] transition border border-[#0E041D] hover:border-white`}
                 >
                   {lang}
                 </button>
